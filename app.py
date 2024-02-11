@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Medvice", page_icon=":stethoscope:", layout='wide', initial_sidebar_state='collapsed')
 
-tabs = st.tabs(["**Home**", "**Medvisor**","**Specialties**", "**Architecture**","**Limitations**", "**Elevance Health**", "**References**"])
+tabs = st.tabs(["**Home**", "**Medvisor**","**Specialties**", "**Architecture**","**Elevance Health**","**Intel Developer Cloud**","**Limitations**", "**References**"])
 
 
 with tabs[0]:
@@ -65,10 +65,19 @@ with tabs[2]:
         
 
 with tabs[3]:
-    st.image("",caption="")       
+    st.image("system_arch.png",caption="Complete Design for Backend")       
 
 with tabs[4]:
-    st.markdown("We throughly enjoyed getting to pursue the Elevance Health challenge. To complete task 1, we built a Text-to-SQL LLM using the Hugging Face library and pre-trained model weights from juierror/text-to-sql-with-table-schema")
+    cols = st.columns(3)
+    with cols[1]:
+        st.markdown("We throughly enjoyed getting to pursue the Elevance Health challenge. To complete task 1, we built a Text-to-SQL LLM using the Hugging Face library and pre-trained model weights from juierror/text-to-sql-with-table-schema. This model was used to support the backend of our application and also provide a benchmark to train fine-tuned LLMs against. When prompting, we ensured to assign a role, provide the schema in context, and test on a signficant dataset. Unfortunately, we were not able to implement a RAG due to HF server and environment issues, but we look forward to adding this implementation to future iterations of our product.")
+        st.markdown("For Task 2, we implemented a LLM using the LLAMA-7B architecture to provide recommendations to users based on a given query and a corresponding health profile. The model is able to aggregate the health profile by synthesizing information across various FHIR tables, allowing it get a better understanding of the patient's medical history.")
+with tabs[5]:
+    cols = st.columns(3)
+    with cols[1]:
+        st.markdown("The Intel Developer Cloud provided a great challenge for our team to undertake. We completed several tasks, such as uploading our final Vision Transformer for tumor classification to Hhugging Face")
+        st.image("vit_idc.png", caption='Building a ViT in Jupyter Notebook on IDC')
+        st.image("ft_idc.png", caption="Finetuning a LLM for Text-To-SQL in Jupyter Notebook on IDC")
 
 with tabs[-2]:
     cols = st.columns(3)
