@@ -65,7 +65,7 @@ with tabs[2]:
         
 
 with tabs[3]:
-    st.image("system_arch.png",caption="Complete Design for Backend")       
+    st.image("./data/system_arch.png",caption="Complete Design for Backend")       
 
 with tabs[4]:
     cols = st.columns(3)
@@ -76,8 +76,8 @@ with tabs[5]:
     cols = st.columns(3)
     with cols[1]:
         st.markdown("The Intel Developer Cloud provided a great challenge for our team to undertake. We completed several tasks, such as uploading our final Vision Transformer for tumor classification to Hhugging Face")
-        st.image("vit_idc.png", caption='Building a ViT in Jupyter Notebook on IDC')
-        st.image("ft_idc.png", caption="Finetuning a LLM for Text-To-SQL in Jupyter Notebook on IDC")
+        st.image("./data/vit_idc.png", caption='Building a ViT in Jupyter Notebook on IDC')
+        st.image("./data/ft_idc.png", caption="Finetuning a LLM for Text-To-SQL in Jupyter Notebook on IDC")
 
 with tabs[-2]:
     cols = st.columns(3)
